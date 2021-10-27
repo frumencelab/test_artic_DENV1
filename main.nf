@@ -3,16 +3,13 @@ import java.util.zip.GZIPInputStream;
 
 nextflow.enable.dsl = 2
 
-valid_schemes = ["SARS-CoV-2", "spike-seq"]
-valid_scheme_versions = ["V1", "V2", "V3", "V1200"]
+valid_schemes = ["D1"]
+valid_scheme_versions = ["V1"]
 
-if (params.scheme_name == "spike-seq") {
-    valid_scheme_versions = ["V1"]
-}
 
 def helpMessage(){
     log.info """
-SARS-Cov-2 Artic Analysis Workflow
+D1 Artic Analysis Workflow
 
 Usage:
     nextflow run main.nf [options]
